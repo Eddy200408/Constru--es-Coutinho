@@ -1,0 +1,584 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333333;
+    
+   
+}
+
+.topnav{
+
+    width: 100%;
+    background-image: url(/img/slide2.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.logo{
+    font-size: 28px;
+    color: #fff;
+
+}
+.span{
+    color: #fe9445;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: #fe9445;
+    transition: .3s;
+}
+button{
+    border: none;
+    background: #fe9445;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+nav img{
+    width: 15%;
+    height: 15%;
+
+}
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+}
+
+.container{
+    padding: 0;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgb(0 0 0 / 71%);
+    
+   
+   
+}
+
+.slide-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    height: 100%;
+    
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    height: 100%;
+    background-color: black;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    visibility: hidden;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 2ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+
+.conteudo{
+
+    place-items: center;
+    padding-left: 11%;
+    max-width: 100%;
+    padding-right: 11%;
+    text-align: center;
+    align-items: center;
+}
+.container1{
+    padding: 50px;
+    width: 70%;
+    height: 50%;
+    background-color: #ecebeb;
+    margin-top: 5%;
+    /* margin-left: 15%; */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20%;
+    /* margin-right: 25%;*/
+}
+.title{
+    text-align: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.containerAbout{
+    padding-right: 22%;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-areas: "card1 card2";
+    grid-template-columns: 50% 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.card1 img{
+    width: 100%;
+    height: 80%;
+}
+.card2{
+    margin-top: 3%;
+}
+.card2 p{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+.conteudoM{
+    margin-top: 55vh;
+}
+.containerMissao{
+        
+    padding-right: 20%;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-areas: "card1 card2";
+    grid-template-columns: 80% 50%;
+       
+}
+.title2{
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.iconM{
+    grid-area: card2;
+    width: 100%;
+}
+.iconM img{
+    width: 40%;
+    height: 65%;
+    margin-top: 5%;
+}
+.pMissao{
+    grid-area: card1;
+    width: 100%;
+}
+.pMissao p{
+    width: 105%;
+    margin-top: 5vh;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 25px;
+
+}
+.conteudoV{
+    margin-top: 10vh;
+}
+.containerVisao{
+      /* padding-left: 10%; */
+      padding-right: 25%;
+      display: grid
+  ;
+      grid-gap: 10%;
+      grid-template-areas: "card1 card2";
+      grid-template-columns: 50% 73%;
+      margin-top: 4vh;
+      margin-bottom: 5%;
+}
+.title3{
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.iconV{
+    grid-area: card1;
+    width: 100%;
+}
+.iconV img{
+    width: 40%;
+    height: 75%;
+    margin-top: 5%;
+}
+.pVisao{
+    grid-area: card2;
+    width: 100%;
+}
+.pVisao p{
+    width: 100%;
+    line-height: 1.8;
+    text-align: right;
+    font-size: 25px;
+
+}
+
+.containerContact button{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.329);
+}
+/* INICIO DE CSS FOOTER*/
+
+footer{
+    margin-top: 5vh;
+    background-color: #232323;
+    height: 200px;
+    color: #bbbbbb;
+    padding: 5% 10%;
+    clear: all;
+}
+
+.container-footer{
+    display: grid;
+    grid-template-areas: "Fimg text1 text2 button";
+    grid-template-columns: 26% 26% 26% 20%;
+    grid-gap: 4%;
+}
+.container-footer h5{
+    color: white;
+    margin-bottom: 7%;
+    font-size: 15px;
+    margin-top: 7%;
+}
+.container-footer p{
+    margin-bottom: 7%;
+}
+
+.container-footer a{
+    margin-bottom: 15px;
+    color: #bbbbbb;
+    text-decoration: none;
+}
+.container-footer img{
+    grid-area: Fimg;
+    width: 100%;
+}
+.text-footer{
+    grid-area: text1;
+}
+.text2-footer{
+    grid-area: text2;
+}
+.copy{
+    text-align: center;
+}
+/* Estilo para o ícone de scroll */
+#scroll-down {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Oculto por padrão */
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+  
+    color: gray;
+   
+   
+  }
+  
+  /* Se desejar um efeito de fade quando o ícone aparece */
+  #scroll-down.show {
+    display: block;
+    opacity: 1;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+ 
+  @keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.2);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+  #back-to-top button{
+    
+  }
+  #back-to-top {
+    position: absolute;
+    bottom: 0;
+    right: 20px; /* Mantém o botão no canto inferior direito */
+    width: 50px;
+    height: 50px;
+    background: #fe9445;
+    color: white;
+    border: none;
+    
+    font-size: 24px;
+    display: none; /* Oculto por padrão */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  }
+  
+  #back-to-top:hover {
+    background: #e68332;
+  }
+  
+  #back-to-top.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #back-to-top.hide {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+
+/*RESPONSIVA*/
+@media screen and (max-width: 750px){
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        
+
+    }
+    
+    html, body {
+        width: 100vw;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    nav img{
+        width: 14vh;
+        height: 10vh;
+        position: absolute;
+        left: 4vh;
+        top: 3vh;
+    }
+
+    /* Oculta a lista e o botão por padrão */
+    #nav-list,
+    nav > button {
+        display: none;
+    }
+
+    /* Exibe o ícone do menu */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 10%;
+    }
+
+    /* Estiliza a lista do menu para aparecer como um dropdown */
+    #nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        background: rgb(0 0 0 / 69%);
+        width: 37vh;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px 10px;
+        height: 23vh;
+    }
+
+    #nav-list.active {
+        display: flex;
+        z-index: 10;
+    }
+
+    #nav-list li {
+        padding: 10px;
+    }
+
+    nav > button {
+        position: absolute;
+        top: 23vh;
+        right: 15%;
+        width: 271px;
+        text-align: center;
+        background: #fe9445;
+        border-radius: 23px;
+        padding: 10px 0;
+        z-index: 15;
+    }
+
+    nav > button.active {
+        display: block;
+    }
+
+    .container{
+        box-shadow: none;
+    }
+    .conteudo{
+        max-width: 100%;
+        font-size: 18px;
+        padding: 5vh;
+    }
+   
+
+    .container1{
+        width: 80%;
+        height: auto;
+        margin: 0;
+        padding: 5vh;
+    }
+    .title{
+        font-size: 25px;
+    }
+
+    .containerAbout{
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .card2 p{
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .conteudoM{
+        margin-top: 65vh;
+    }
+    .title2{
+        font-size: 25px;
+    }
+
+    .containerMissao{
+        display: block;
+        padding: 0;
+    }
+    .pMissao p{
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .conteudoV{
+        margin-top: 5vh;
+    }
+    .title3{
+        font-size: 25px;
+    }
+    .containerVisao{
+        display: block;
+        padding: 0;
+    }
+    .pVisao p{
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .containerContact{
+        line-height: 1.5;
+    }
+    .containerContact button{
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.329);
+        margin-top: 3vh;
+    }
+   
+    footer{
+        width: 100%;
+        height: auto;
+        margin-top: 20%;
+       
+    }
+    .container-footer{
+        display: block;
+        text-align: center;
+    }
+    .text-footer{
+        display: block;
+    }
+    .text2-footer{
+        display: block;
+    }
+    .text2-footer a{
+        margin-top: 2vh;
+    }
+    .text3-footer{
+        display: block;
+    }
+    .text3-footer button{
+        margin: 2vh;
+        border-radius: 12px;
+    }
+    .container-footer img{
+        width: 50%;
+        margin-top: 15%;
+    }
+    .container-footer h5{
+        font-size: 23px;
+    }
+    .container-footer p{
+        font-size: 19px;
+    }
+    .copy{
+        text-align: center;
+    }
+}
