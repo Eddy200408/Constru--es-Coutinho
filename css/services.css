@@ -449,6 +449,13 @@ footer{
     .container{
         height: 30vh;
         box-shadow: none;
+        overflow: hidden;
+    }
+    .slider{
+        box-shadow: none;
+        overflow-y: hidden;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
     }
 
     .Title-services{

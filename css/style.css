@@ -456,12 +456,16 @@ footer{
     }
     .container{
         height: 100vh;
+        overflow: hidden;
     }
     .slide-wrapper{
         height: 100%;
     }
     .slider{
         height: 100vh;
+        overflow-y: hidden;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
     }
     .slider img{
         height: 100vh;

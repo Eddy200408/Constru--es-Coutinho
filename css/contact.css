@@ -382,6 +382,9 @@ footer{
     .containerCarrossel{
         box-shadow: none;
     }
+    .slider{
+        box-shadow: none;
+    }
     .contact{
         padding: 2vh;
         width: 80%;

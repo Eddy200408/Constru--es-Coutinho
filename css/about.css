@@ -472,6 +472,9 @@ footer{
     .container{
         box-shadow: none;
     }
+    .slider{
+        box-shadow: none;
+    }
     .conteudo{
         max-width: 100%;
         font-size: 18px;
