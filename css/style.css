@@ -469,6 +469,7 @@ footer{
     }
     .slider img{
         height: 100vh;
+        overflow: hidden;
     }
     .conteudo{
         max-width: 100%;
