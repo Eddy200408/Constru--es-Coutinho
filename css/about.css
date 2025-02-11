@@ -270,18 +270,18 @@ nav img{
 /* INICIO DE CSS FOOTER*/
 
 footer{
-    margin-top: 5vh;
+    margin-top: 5%;
     background-color: #232323;
-    height: 200px;
+    height: auto;
     color: #bbbbbb;
-    padding: 5% 10%;
-    clear: all;
+    padding: 5% 8%;
+    padding-bottom: 1vh;
 }
 
 .container-footer{
     display: grid;
-    grid-template-areas: "Fimg text1 text2 button";
-    grid-template-columns: 26% 26% 26% 20%;
+    grid-template-areas: " text1 text2 button";
+    grid-template-columns: 30% 28% 34%;
     grid-gap: 4%;
 }
 .container-footer h5{
@@ -384,6 +384,34 @@ footer{
     transform: translateY(20px);
   }
   
+  
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #fe9445;
+    color: #fff;
+    border: none;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+  /* Classe que torna o botão visível */
+  #scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  #scrollToTopBtn svg{
+    color: #fff;
+  }
 
 /*RESPONSIVA*/
 @media screen and (max-width: 750px){
@@ -586,5 +614,6 @@ footer{
     }
     .copy{
         text-align: center;
+        margin-top: 10px;
     }
 }

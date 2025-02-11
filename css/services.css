@@ -249,16 +249,16 @@ main {
 footer{
     margin-top: 10%;
     background-color: #232323;
-    height: 230px;
+    height: auto;
     color: #bbbbbb;
-    padding: 5% 10%;
-    clear: all;
+    padding: 5% 8%;
+    padding-bottom: 1vh;
 }
 
 .container-footer{
     display: grid;
-    grid-template-areas: "Fimg text1 text2 button";
-    grid-template-columns: 26% 26% 26% 20%;
+    grid-template-areas: " text1 text2 button";
+    grid-template-columns: 30% 28% 34%;
     grid-gap: 4%;
 }
 .container-footer h5{
@@ -277,7 +277,7 @@ footer{
     text-decoration: none;
 }
 .container-footer img{
-    grid-area: Fimg;
+    /*grid-area: Fimg;*/
     width: 100%;
 }
 .text-footer{
@@ -326,43 +326,34 @@ footer{
   }
 
 
-  #back-to-top {
+  #scrollToTopBtn {
     position: fixed;
-    bottom: 54vh;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     width: 50px;
     height: 50px;
-    background: #fe9445;
-    color: white;
+    background-color: #fe9445;
+    color: #fff;
     border: none;
-    font-size: 24px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 1000;
-    border-radius: 1vh;/* Garante que o botão fique acima de outros elementos */
-  }
-  #back-to-top svg{
-    color: white;
-  }
-  
-  #back-to-top:hover {
-    background: #e68332;
-  }
-  
-  #back-to-top.show {
+    border-radius: 25%;
     display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  #back-to-top.hide {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     opacity: 0;
-    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
   }
-  
+  /* Classe que torna o botão visível */
+  #scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  #scrollToTopBtn svg{
+    color: #fff;
+  }
+ 
   
 
 @media screen and (max-width: 750px){
@@ -514,5 +505,6 @@ footer{
     }
     .copy{
         text-align: center;
+        margin-top: 10px;
     }
 }
