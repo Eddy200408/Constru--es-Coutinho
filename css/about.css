@@ -5,6 +5,7 @@ body{
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     color: #333333;
+    line-height: 1.8;
     
    
 }
@@ -137,15 +138,15 @@ nav img{
 .conteudo{
 
     place-items: center;
-    padding-left: 11%;
+    padding-left: 13%;
     max-width: 100%;
-    padding-right: 11%;
+    padding-right: 13%;
     text-align: center;
     align-items: center;
 }
 .container1{
     padding: 50px;
-    width: 70%;
+    width: 67%;
     height: 50%;
     background-color: #ecebeb;
     margin-top: 5%;
@@ -428,20 +429,21 @@ footer{
         position: absolute;
         top: 20px;
         right: 10%;
+        z-index: 100;
     }
 
     /* Estiliza a lista do menu para aparecer como um dropdown */
     #nav-list {
         flex-direction: column;
         position: absolute;
-        top: 60px;
-        right: 10%;
-        background: rgb(0 0 0 / 69%);
-        width: 37vh;
+        top: 0;
+        /* right: 10%; */
+        background: rgb(0 0 0 / 76%);
+        width: 100%;
         text-align: center;
-        border-radius: 10px;
-        padding: 10px 10px;
-        height: 28vh;
+        border-radius: 5px;
+        padding: 60px 10px;
+        
     }
 
     #nav-list.active {
@@ -455,7 +457,7 @@ footer{
 
     nav > button {
         position: absolute;
-        top: 23vh;
+        top: 25vh;
         right: 15%;
         width: 271px;
         text-align: center;
@@ -487,6 +489,8 @@ footer{
         height: auto;
         margin: 0;
         padding: 5vh;
+        right: 10%;
+        left: 10%;
     }
     .title{
         font-size: 25px;
@@ -504,7 +508,7 @@ footer{
     }
 
     .conteudoM{
-        margin-top: 65vh;
+        margin-top: 60vh;
     }
     .title2{
         font-size: 25px;

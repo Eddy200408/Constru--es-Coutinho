@@ -105,7 +105,7 @@ nav img{
     object-fit: cover;
     height: 100%;
     background-color: black;
-    filter: brightness(60%);
+    filter: brightness(40%);
     z-index: -10;
 }
 
@@ -414,20 +414,23 @@ footer{
         position: absolute;
         top: 20px;
         right: 10%;
+        z-index: 100;
     }
 
     /* Estiliza a lista do menu para aparecer como um dropdown */
     #nav-list {
+        line-height: 2;
         flex-direction: column;
         position: absolute;
-        top: 60px;
-        right: 10%;
-        background: rgb(0 0 0 / 69%);
-        width: 37vh;
+        top: 0;
+        /* right: 10%; */
+        background: rgb(0 0 0 / 90%);
+        width: 100%;
         text-align: center;
-        border-radius: 10px;
-        padding: 10px 10px;
-        height: 28vh;
+        border-radius: 5px;
+        padding: 37vh 10px;
+        height: 100vh;
+        font-size: 18px;
     }
 
     #nav-list.active {
