@@ -506,8 +506,12 @@ footer{
         padding: 5vh;
     }
     .Slogan{
-        top: 38vh;
-        width: 40vh;
+        top: 0;
+        width: 45vh;
+        padding: 4vh;
+        left: 0;
+        height: 90vh;
+        padding-top: 42vh;
     }
     .Slogan h1{
         font-size: 36px;
