@@ -7,6 +7,8 @@ body{
     color: #333333;
     line-height: 1.5;
     
+    
+    
    
 }
 
@@ -292,6 +294,123 @@ main {
     vertical-align: middle;
   }
 
+/*INICIO DE CSS DA GALERIA DE FOTOS*/
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espaço entre botão e galeria */
+    position: relative;
+  }
+
+  /* Botões */
+  #backBtn,
+  #nextBtn {
+    width: 30px;
+    cursor: pointer;
+  }
+
+/* Galeria principal (scroll horizontal) */
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* para animação suave ao clicar nos botões */
+    width: 80vw; /* largura da galeria */
+   
+  }
+
+  /* Cada “slide” (cada imagem isolada) */
+  .gallery > div {
+    flex: none; 
+    width: calc(80vw / 3); /* 3 imagens simultâneas em telas grandes */
+    box-sizing: border-box;
+    padding: 5px; /* espaçamento interno */
+  }
+
+  /* Ajuste das imagens */
+  .gallery > div img {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+
+  .gallery > div img:hover {
+    transform: scale(1.02);
+  }
+
+  /* Oculta a scrollbar no Chrome/Safari */
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+   /* ----- Indicadores (dots) ----- */
+   .slider-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .slider-indicators .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: gray;
+    cursor: pointer;
+   
+  }
+  .slider-indicators .dot.active {
+    background: black;
+  }
+
+  .modal {
+    display: none;              /* escondido por padrão */
+    position: fixed;            /* fica em cima de tudo */
+    z-index: 9999;             /* grande valor para ficar acima de qualquer elemento */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8); /* fundo escuro translúcido */
+    align-items: center;        /* centraliza verticalmente */
+    justify-content: center;    /* centraliza horizontalmente */
+  }
+  /* Conteúdo da imagem dentro da modal */
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+    position: relative;
+  }
+  /* Botão de fechar (X) */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /* Navegação dentro da modal (setas) */
+  .modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* para que clique “atravesse” a área e só funcione no ícone */
+  }
+  .modal-nav span {
+    pointer-events: auto; /* reativa clique nos ícones */
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    
+    margin: 0 12px;
+    user-select: none; /* evita seleção de texto ao clicar */
+  }
+
 /* INICIO DE CSS FOOTER*/
 footer{
     margin-top: 5%;
@@ -564,6 +683,9 @@ footer{
         font-weight: normal;
     }
 
+    .gallery > div {
+        width: 80vw; /* 1 imagem por “slide” */
+      }    
     footer{
         width: 100%;
         height: auto;

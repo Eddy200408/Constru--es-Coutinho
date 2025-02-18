@@ -43,7 +43,8 @@
                   color: white;
                   background-color: #fe9445;
                   padding: 2vh;
-                  border-radius: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                  border-radius: 30px;
+                  margin-left: 20vh;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
   </svg>  Fale Conosco</a></li>
         
@@ -91,7 +92,7 @@
     
     <div class="containerAbout">
         <article class="card1" data-aos="flip-left" data-aos-duration="1000">
-            <img alt="icon" src="icon/logoBlack.png">
+            <img alt="icon" src="icon/logoWhite - Cópia.png">
         </article>
         <article class="card2" data-aos="flip-left" data-aos-duration="1000">
             <p>
@@ -104,9 +105,9 @@
     
 
     <!--INICIO DE CARD OBRAS-->
-
-    <h1 class="Title-services" data-aos="fade-right" data-aos-duration="1000"><span style="color: #333333;">Obras</span> Concluidas</h1>
-
+   
+    <h1 class="Title-services" data-aos="fade-right" data-aos-duration="1000"><span style="color: #333333;">Nossos</span> Projetos</h1>
+ <!--
     <main>
         <div class = "card" data-aos="zoom-in" data-aos-duration="1000">
           <img src="img/placa.png" alt="">
@@ -161,8 +162,53 @@
             </div>
           </div>
       </main>
-
+-->
     <!--FIM DE CARDS OBRA-->  
+
+    <div class="gallery-wrap">
+      <img src="img/Galeria/back.png" id="backBtn">
+ 
+  <div class="gallery" id="galleryContainer">
+      <!-- Cada DIV é um “slide” -->
+      <div><img src="img/Galeria/1.jpg" alt="Imagem 1"></div>
+      <div><img src="img/Galeria/2.jpg" alt="Imagem 2"></div>
+      <div><img src="img/Galeria/3.jpg" alt="Imagem 3"></div>
+      <div><img src="img/Galeria/4.jpg" alt="Imagem 4"></div>
+      <div><img src="img/Galeria/5.jpg" alt="Imagem 5"></div>
+      <div><img src="img/Galeria/6.jpg" alt="Imagem 6"></div>
+      <div><img src="img/Galeria/7.jpg" alt="Imagem 7"></div>
+      <div><img src="img/Galeria/8.jpg" alt="Imagem 8"></div>
+      <div><img src="img/Galeria/9.jpg" alt="Imagem 9"></div>
+      <div><img src="img/Galeria/10.jpg" alt="Imagem 10"></div>
+      <div><img src="img/Galeria/12.jpg" alt="Imagem 11"></div>
+      <div><img src="img/Galeria/12(1).png" alt="Imagem 12"></div>
+      <div><img src="img/Galeria/13.png" alt="Imagem 13"></div>
+      <div><img src="img/Galeria/14.png" alt="Imagem 14"></div>
+      <div><img src="img/Galeria/15.png" alt="Imagem 15"></div>
+      <div><img src="img/Galeria/16.png" alt="Imagem 16"></div>
+      <div><img src="img/Galeria/17.png" alt="Imagem 17"></div>
+      <div><img src="img/Galeria/18.png" alt="Imagem 13"></div>
+    </div>
+
+      <img src="img/Galeria/next.png" id="nextBtn">      
+   </div>  
+
+    <!-- Modal para ver a imagem ampliada -->
+    <div class="modal" id="modal">
+        <!-- Ícone de fechar -->
+        <span class="close" id="closeModal">&times;</span>
+        <!-- Imagem ampliada -->
+        <img class="modal-content" id="modalImg">
+        <!-- Ícones de navegação dentro da modal -->
+        <div class="modal-nav">
+        <span id="modalPrev">&#10094;</span>
+        <span id="modalNext">&#10095;</span>
+        </div>
+    </div>
+
+    <div class="slider-indicators" id="sliderIndicators">
+        <!-- Os dots serão gerados dinamicamente -->
+    </div>
 
     <!--INICIO DE CONTAINER OUR SERVICES-->
     
@@ -292,6 +338,9 @@
 
 
 <script>
+
+  //CONFIGURACAO DO CARROSEL
+
     document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector(".slider");
         let index = 0;
@@ -310,6 +359,7 @@
         setInterval(nextSlide, 3000); // Troca de imagem a cada 3 segundos
     });
     </script>
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -431,7 +481,7 @@ function resetInactivityTimer() {
 }
 
 // Lista de eventos que consideramos como interação do usuário
-const userEvents = ["mousemove", "scroll", "keydown", "touchstart"];
+const userEvents = [ "scroll", "keydown"];
 userEvents.forEach(event => {
   window.addEventListener(event, resetInactivityTimer, false);
 });
@@ -445,6 +495,138 @@ scrollToTopBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
+});
+</script>
+
+
+
+<!--CONFIGURACAO DA GALERIA DE FOTOS-->
+
+
+<script>
+  // ---------- Scroll horizontal na galeria ----------
+const galleryContainer = document.getElementById('galleryContainer');
+const backBtn = document.getElementById('backBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+backBtn.addEventListener('click', () => {
+ galleryContainer.scrollLeft -= galleryContainer.clientWidth;
+});
+
+nextBtn.addEventListener('click', () => {
+ galleryContainer.scrollLeft += galleryContainer.clientWidth;
+});
+
+ // ---------- Auto-slide a cada 3 segundos ----------
+ setInterval(() => {
+ // Se estivermos próximos do fim, volta para o início
+ const slideWidth = getSlideWidth();
+ let index = Math.round(galleryContainer.scrollLeft / slideWidth);
+ if (index >= slides.length - 1) {
+   galleryContainer.scrollLeft = 0;
+ } else {
+   if (window.innerWidth > 750) {
+     // MODO PC (> 750px): avança 1 imagem
+     // cada imagem tem largura (80vw / 3), então:
+     galleryContainer.scrollLeft += (galleryContainer.clientWidth / 3);
+   } else {
+     // MODO MOBILE (<= 750px): avança 1 imagem (tela inteira)
+     galleryContainer.scrollLeft += galleryContainer.clientWidth;
+   }
+ }
+ updateSliderDots();
+}, 3000); // 3 segundos
+
+// Atualiza os dots quando há rolagem manual
+galleryContainer.addEventListener('scroll', () => {
+ updateSliderDots();
+});
+
+// Retorna a largura de um slide dependendo do dispositivo
+function getSlideWidth() {
+ return window.innerWidth > 750 ? galleryContainer.clientWidth / 3 : galleryContainer.clientWidth;
+}
+
+// Gera os indicadores de acordo com o número de slides
+const sliderIndicators = document.getElementById('sliderIndicators');
+const slides = document.querySelectorAll('.gallery > div');
+slides.forEach((slide, index) => {
+ const dot = document.createElement('div');
+ dot.classList.add('dot');
+ dot.addEventListener('click', () => {
+   galleryContainer.scrollLeft = index * getSlideWidth();
+   updateSliderDots();
+ });
+ sliderIndicators.appendChild(dot);
+});
+
+// Atualiza o indicador ativo conforme o slide atual
+function updateSliderDots() {
+ const slideWidth = getSlideWidth();
+ let index = Math.round(galleryContainer.scrollLeft / slideWidth);
+ if (index >= slides.length) index = slides.length - 1;
+ document.querySelectorAll('.slider-indicators .dot').forEach((dot, idx) => {
+   dot.classList.toggle('active', idx === index);
+ });
+}
+// Inicializa os indicadores
+updateSliderDots();
+
+// ---------- Modal (imagem ampliada) ----------
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const closeModal = document.getElementById('closeModal');
+const modalPrev = document.getElementById('modalPrev');
+const modalNext = document.getElementById('modalNext');
+
+// Seleciona todas as imagens da galeria
+const allImages = document.querySelectorAll('.gallery img');
+
+// Índice da imagem atualmente exibida na modal
+let currentIndex = 0;
+
+// Ao clicar em qualquer imagem, abre a modal
+allImages.forEach((img, index) => {
+ img.addEventListener('click', () => {
+   currentIndex = index;
+   openModal(currentIndex);
+ });
+});
+
+// Função para abrir a modal com a imagem no índice 'i'
+function openModal(i) {
+ modal.style.display = 'flex';       // mostra a modal
+ modalImg.src = allImages[i].src;    // define o src da imagem ampliada
+}
+
+// Fechar a modal ao clicar no (X)
+closeModal.addEventListener('click', () => {
+ modal.style.display = 'none';
+});
+
+// Botão "Próxima" dentro da modal
+modalNext.addEventListener('click', () => {
+ currentIndex++;
+ if (currentIndex >= allImages.length) {
+   currentIndex = 0; // volta para a primeira, se quiser looping
+ }
+ modalImg.src = allImages[currentIndex].src;
+});
+
+// Botão "Anterior" dentro da modal
+modalPrev.addEventListener('click', () => {
+ currentIndex--;
+ if (currentIndex < 0) {
+   currentIndex = allImages.length - 1; // vai para a última, se quiser looping
+ }
+ modalImg.src = allImages[currentIndex].src;
+});
+
+// Fecha a modal se o usuário clicar fora da imagem
+window.addEventListener('click', (e) => {
+ if (e.target === modal) {
+   modal.style.display = 'none';
+ }
 });
 </script>
 
