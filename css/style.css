@@ -682,10 +682,17 @@ footer{
         margin-bottom: 5vh;
         font-weight: normal;
     }
-
+    .gallery-wrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
     .gallery > div {
         width: 80vw; /* 1 imagem por “slide” */
-      }    
+      } 
+    .slider-indicators{
+        margin-top: 72%;
+    }     
     footer{
         width: 100%;
         height: auto;
