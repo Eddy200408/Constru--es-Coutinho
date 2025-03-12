@@ -81,7 +81,7 @@ nav img{
     width: 100%;
     height: 40vh;
     overflow: hidden;
-    box-shadow: 5px 10px 20px rgb(0 0 0 / 71%);
+    
     
    
    
@@ -138,24 +138,24 @@ nav img{
 .conteudo{
 
     place-items: center;
-    padding-left: 13%;
+    padding-left: 12%;
     max-width: 100%;
-    padding-right: 13%;
+    padding-right: 12%;
     text-align: center;
     align-items: center;
 }
 .container1{
-    padding: 50px;
-    width: 67%;
+    padding: 50px; 
+    /* width: 67%; */
     height: 50%;
-    background-color: #ecebeb;
+    /* background-color: #ecebeb; */
     margin-top: 5%;
     /* margin-left: 15%; */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    position: absolute;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+    /* position: absolute; */
     top: 20%;
-    /* margin-right: 25%;*/
+   
 }
 .title{
     text-align: center;
@@ -180,12 +180,12 @@ nav img{
     margin-top: 3%;
 }
 .card2 p{
-    font-size: 20px;
+    font-size: 25px;
     text-align: justify;
     line-height: 1.5;
 }
 .conteudoM{
-    margin-top: 55vh;
+    /*margin-top: 55vh;*/
 }
 .containerMissao{
         
@@ -501,6 +501,7 @@ footer{
 
     .container{
         box-shadow: none;
+        height: 30vh;
     }
     .slider{
         box-shadow: none;
@@ -513,12 +514,11 @@ footer{
    
 
     .container1{
-        width: 80%;
-        height: auto;
+       
         margin: 0;
-        padding: 5vh;
+        padding: 0; 
         right: 10%;
-        left: 10%;
+
     }
     .title{
         font-size: 25px;
@@ -536,7 +536,7 @@ footer{
     }
 
     .conteudoM{
-        margin-top: 60vh;
+        margin-top: 5vh;
     }
     .title2{
         font-size: 25px;

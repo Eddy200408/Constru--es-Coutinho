@@ -71,7 +71,7 @@ nav img{
 .container{
     padding: 0;
     width: 100%;
-    height: 350px;
+    height: 40vh;
     overflow: hidden;
     
    
@@ -614,10 +614,12 @@ footer{
     .cards2{
         margin-bottom: 10%;
         padding-bottom: 0;
+        height: 60vh;
     }
     .cards3{
         margin-bottom: 10%;
         padding-bottom: 0;
+        height: 60vh;
     }
     .cards-box{
         margin-bottom: 2vh;
