@@ -554,7 +554,7 @@ footer{
     /* Exibe o ícone do menu */
     .menu-icon {
         display: block;
-        font-size: 28px;
+        font-size: 35px;
         cursor: pointer;
         color: white;
         position: absolute;
@@ -629,7 +629,7 @@ footer{
         width: 45vh;
         padding: 4vh;
         left: 0;
-        height: 90vh;
+        height: 150vh;
         padding-top: 42vh;
     }
     .Slogan h1{
@@ -683,15 +683,18 @@ footer{
         font-weight: normal;
     }
     .gallery-wrap{
-        position: absolute;
+        
         left: 0;
         right: 0;
+        /* margin: -5vh; */
+        margin-left: -5vh;
+        margin-right: -5vh;
     }
     .gallery > div {
         width: 80vw; /* 1 imagem por “slide” */
       } 
     .slider-indicators{
-        margin-top: 72%;
+        
     }     
     footer{
         width: 100%;

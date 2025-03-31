@@ -530,7 +530,7 @@ footer{
     /* Exibe o ícone do menu */
     .menu-icon {
         display: block;
-        font-size: 28px;
+        font-size: 35px;
         cursor: pointer;
         color: white;
         position: absolute;
