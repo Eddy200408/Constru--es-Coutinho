@@ -987,7 +987,7 @@ footer{
     }
     nav.scrolled{
         padding: 15px;
-        height: 10%;
+        height: 14vh;
     }
     nav.scrolled a {
     color: #fff;
