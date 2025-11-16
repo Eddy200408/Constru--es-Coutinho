@@ -19,6 +19,18 @@
 </head>
 <body>
 
+    <!-- LOADER: Ícone de construção martelando -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-container">
+           
+                <!-- Picareta com animação de martelada -->
+               <img src="icon/picareta.png" class="loader-icon" width="80" height="80" alt="Picareta">
+              
+          
+            <p class="loader-text">Loading</p>
+        </div>
+    </div>
+
     <!--INICIO DE NAVBAR-->
 
     <div class="topnav">
@@ -631,5 +643,18 @@ window.addEventListener('click', (e) => {
 });
 </script>
 
+<!-- Script para esconder loader quando página estiver totalmente carregada -->
+<script>
+  window.addEventListener('load', function(){
+    const loaderOverlay = document.getElementById('loader-overlay');
+    if(loaderOverlay){
+      loaderOverlay.classList.add('hidden');
+      // Remove do DOM após a transição
+      setTimeout(() => {
+        loaderOverlay.style.display = 'none';
+      }, 500);
+    }
+  });
+</script>
     
 </html>
